@@ -1,0 +1,12 @@
+name: bachelor
+channels:
+  - conda-forge
+dependencies:
+  - pip
+  - numpy
+  - matplotlib
+  - ca-certificates
+  - openssl
+  - black
+  - certifi
+prefix: C:\Users\Onur\mambaforge\envs\bachelor

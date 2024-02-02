@@ -1,0 +1,21 @@
+# save in /lib/systemd/system/
+# then:
+# sudo chmod 644 /lib/systemd/system/hello.service
+# chmod +x /home/pi/hello_world.py
+# sudo systemctl daemon-reload
+# sudo systemctl enable hello.service
+# sudo systemctl start hello.service
+
+[Unit]
+Description=Start camera script
+After=multi-user.target
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/usr/bin/python /home/pi/Bachelor/camera.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
